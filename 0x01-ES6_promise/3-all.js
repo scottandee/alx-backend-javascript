@@ -7,18 +7,14 @@ export default function handleProfileSignup() {
 
   Promise.all([photo, user]).then((objects) => {
     for (const obj of objects) {
-      const count = 0;
-      const { length } = Object.keys(obj).length;
-
       for (const [key, value] of Object.entries(obj)) {
         if (key !== 'status') {
           signUp += value;
-          if (count !== length) {
-            signUp += ' ';
-          }
+          signUp += ' ';
         }
       }
     }
+    signUp = signUp.trim();
     console.log(signUp);
   }).catch((() => console.log('Signup system offline')));
 }
