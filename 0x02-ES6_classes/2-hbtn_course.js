@@ -7,7 +7,7 @@ export default class HolbertonCourse {
     if (typeof length !== 'number') {
       throw new TypeError('Length must be a number');
     }
-    if (!Array.isArray(students) && !students.forEach((stu) => typeof stu === 'string')) {
+    if (!Array.isArray(students)) {
       throw new TypeError('Students must be an array of strings');
     }
     this._name = name;
@@ -45,7 +45,7 @@ export default class HolbertonCourse {
   }
 
   set students(students) {
-    if (!Array.isArray(students) && !students.forEach((stu) => typeof stu === 'string')) {
+    if (!Array.isArray(students)) {
       throw new TypeError('Students must be an array of strings');
     }
     this._students = students;
