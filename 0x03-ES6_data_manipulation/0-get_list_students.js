@@ -1,6 +1,6 @@
 export default function getListStudents() {
   const studentsList = [];
-  const firstNames = ['Guilliame', 'James', 'Serena'];
+  const firstNames = ['Guillaume', 'James', 'Serena'];
   const id = [1, 2, 5];
   const locate = ['San Francisco', 'Columbia', 'San Francisco'];
 
